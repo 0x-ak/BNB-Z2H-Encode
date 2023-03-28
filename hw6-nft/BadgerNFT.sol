@@ -14,6 +14,7 @@ contract BadgerNFT is ERC721 {
     }
 
     function tokenURI(uint256 tokenId) public view override returns(string memory) {
+        _requireMinted(tokenId);
         return string(abi.encodePacked(baseURI));
     }
 

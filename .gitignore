@@ -1,3 +1,6 @@
 .env
 node_modules
+.history
+.env.dev
+.env.prod
 

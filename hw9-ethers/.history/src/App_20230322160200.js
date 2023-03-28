@@ -11,7 +11,7 @@ function App() {
   if (ethereum) {
  
     let abi = [
-      "function name() view returns (string)"
+      "function name() view returns String"
     ]
     let address = "0x1C3dd5c848102ac51E1c47434a00eFbEd1F177C4";
     let provider = new ethers.providers.Web3Provider(ethereum);
@@ -33,16 +33,16 @@ function App() {
       }}>{!connected ? 'Connect wallet' : 'Connected' }</button>
  
  
- 
       <button onClick={() => {
         if (contract && connected) {
-          setName("dummy")
-          console.log("Name")
+          contract.name()
+            .then(name => {
+              setName(name);
+            })
         }
       }}>Get Name</button>
  
-      <h3>Name is : {name}</h3>
-     
+      <h3>{name}</h3>
     </div>
   );
 }

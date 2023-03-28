@@ -3,6 +3,7 @@ import { ethers } from "ethers";
  
 function App() {
   let [name, setName] = useState("");
+  let [savedName, setSavedName] = useState("");
   let [connected, setConnected] = useState(false);
  
   let { ethereum } = window;
@@ -11,7 +12,7 @@ function App() {
   if (ethereum) {
  
     let abi = [
-      "function name() view returns (string)"
+      "function name() view returns String"
     ]
     let address = "0x1C3dd5c848102ac51E1c47434a00eFbEd1F177C4";
     let provider = new ethers.providers.Web3Provider(ethereum);
@@ -32,17 +33,21 @@ function App() {
           }
       }}>{!connected ? 'Connect wallet' : 'Connected' }</button>
  
- 
+      <form>
+          <input id = "name" type="label" placeholder=""/>
+          
+      </form>
  
       <button onClick={() => {
         if (contract && connected) {
-          setName("dummy")
-          console.log("Name")
+          contract.name()
+            .then(name => {
+              setSavedName(name);
+            })
         }
-      }}>Get Name</button>
+      }}>Get text</button>
  
-      <h3>Name is : {name}</h3>
-     
+      <h3>{savedName}</h3>
     </div>
   );
 }

@@ -33,16 +33,18 @@ function App() {
       }}>{!connected ? 'Connect wallet' : 'Connected' }</button>
  
  
- 
+ <!--
       <button onClick={() => {
         if (contract && connected) {
-          setName("dummy")
-          console.log("Name")
+          contract.name()
+            .then(cname => {
+              setName(cname);
+            })
         }
       }}>Get Name</button>
  
       <h3>Name is : {name}</h3>
-     
+-->      
     </div>
   );
 }

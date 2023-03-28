@@ -2,7 +2,8 @@ import { useState } from "react";
 import { ethers } from "ethers";
  
 function App() {
-  let [name, setName] = useState("");
+  let [text, setText] = useState("");
+  let [savedText, setSavedText] = useState("");
   let [connected, setConnected] = useState(false);
  
   let { ethereum } = window;
@@ -11,7 +12,8 @@ function App() {
   if (ethereum) {
  
     let abi = [
-      "function name() view returns (string)"
+      "function changeText(string)",
+      "function text() view returns (string)"
     ]
     let address = "0x1C3dd5c848102ac51E1c47434a00eFbEd1F177C4";
     let provider = new ethers.providers.Web3Provider(ethereum);
@@ -21,7 +23,7 @@ function App() {
  
   return (
     <div className="App">
-      <h1>BadgerCoin Contract</h1>
+      <h1>Text Contract</h1>
  
       <button onClick={() => {
           if (contract && !connected) {
@@ -32,17 +34,29 @@ function App() {
           }
       }}>{!connected ? 'Connect wallet' : 'Connected' }</button>
  
- 
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        if (contract && connected) {
+          contract.changeText(text)
+            .then(() => {
+              setText("");
+            });
+        }
+      }}>
+          <input type="text" placeholder="Enter text" onChange={e => setText(e.currentTarget.value)} value={text} />
+          <input type="submit" value="Change text" />
+      </form>
  
       <button onClick={() => {
         if (contract && connected) {
-          setName("dummy")
-          console.log("Name")
+          contract.text()
+            .then(text => {
+              setSavedText(text);
+            })
         }
-      }}>Get Name</button>
+      }}>Get text</button>
  
-      <h3>Name is : {name}</h3>
-     
+      <h3>{savedText}</h3>
     </div>
   );
 }

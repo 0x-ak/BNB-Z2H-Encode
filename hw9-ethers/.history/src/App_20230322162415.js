@@ -34,15 +34,6 @@ function App() {
  
  
  
-      <button onClick={() => {
-        if (contract && connected) {
-          setName("dummy")
-          console.log("Name")
-        }
-      }}>Get Name</button>
- 
-      <h3>Name is : {name}</h3>
-     
     </div>
   );
 }

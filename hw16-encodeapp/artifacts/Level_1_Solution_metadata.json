@@ -1,0 +1,70 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[2][2]",
+						"name": "x",
+						"type": "uint256[2][2]"
+					},
+					{
+						"internalType": "uint256[2][2]",
+						"name": "y",
+						"type": "uint256[2][2]"
+					}
+				],
+				"name": "solution",
+				"outputs": [
+					{
+						"internalType": "uint256[2][2]",
+						"name": "",
+						"type": "uint256[2][2]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hw16-encodeapp/level1.sol": "Level_1_Solution"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hw16-encodeapp/level1.sol": {
+			"keccak256": "0x17b69c50a8710c3a2f321004782841da539c75d2e283739bf6ce4f9f94ab934f",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://eb4e26a592b9629ea4763efe8d1537ff93503895ac087400c9e5b4ee4c1a4b79",
+				"dweb:/ipfs/QmNu33NGjeaqfHKap16yMfXcFt45ku8JKwLL2xs69yA3zL"
+			]
+		}
+	},
+	"version": 1
+}

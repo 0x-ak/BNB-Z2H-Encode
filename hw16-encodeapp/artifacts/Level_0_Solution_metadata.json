@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "solution",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hw16/hw16-test/level0.sol": "Level_0_Solution"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hw16/hw16-test/level0.sol": {
+			"keccak256": "0x0bf5c530848b3f9b8b6ea5f6252fe6abeaeee15575937fe2082cd7995414f69e",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://0c14cefea8b2790ce796b65eed7f2a1ec19413093d63d723a45b25674e0853b2",
+				"dweb:/ipfs/QmQfAJAp5ZpJ2wqx2V7hTqYKh5kz2WTX1NPni7wuHidR8T"
+			]
+		}
+	},
+	"version": 1
+}

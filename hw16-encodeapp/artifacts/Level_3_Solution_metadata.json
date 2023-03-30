@@ -1,0 +1,65 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "addr",
+						"type": "address"
+					}
+				],
+				"name": "solution",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "codeSize",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"hw16-encodeapp/level3.sol": "Level_3_Solution"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"hw16-encodeapp/level3.sol": {
+			"keccak256": "0xf3ff4609013f79423071721bd5161d25d53eccacd3fd9c15f3948a5a562741a4",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://43d290fd8406bd5a69031d4bcafc53d3740786094d6ec73fc7cef34d1ff085d8",
+				"dweb:/ipfs/Qmeb5QmU6NwPeLWy8VTX8XJCALbxHd5ZGsJF8HLAhnni5V"
+			]
+		}
+	},
+	"version": 1
+}
